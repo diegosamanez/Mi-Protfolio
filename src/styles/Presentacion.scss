@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Ranga;
+    src: url('../fonts/RanggaScript.otf');
+}
+
+.presentacion{
+    background: rgb(39, 61, 61);
+    margin: 0;
+    color: white;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8em;
+    font-family: BebasNeue;
+    font-weight: 900;
+}
+
+@media (max-width: 1440px){
+    .presentacion{
+        font-size: 5.8em;
+    }
+}
+
+@media (max-width: 1024px){
+    .presentacion{
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 866px){
+    .presentacion{
+        font-size: 3.7em;
+    }
+}
+
+@media (max-width: 618px){
+    .presentacion{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 488px){
+    .presentacion{
+        font-size: 2.3em;
+    }
+}
+
+@media (max-width: 375px){
+    .presentacion{
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 327px){
+    .presentacion{
+        font-size: 1.6em;
+    }
+}

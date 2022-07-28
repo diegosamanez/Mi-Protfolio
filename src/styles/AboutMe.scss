@@ -1,0 +1,224 @@
+$back-grd: linear-gradient(to top right ,rgb(23, 88, 90),rgba(255, 145, 0, 0.322));
+
+.contenedor-AboutMe{
+    background: rgb(39, 61, 61);
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    padding-bottom: 10em;
+    padding-top: 5em;
+
+    h2{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .informacion-perfil{
+        margin-bottom: 5em;
+        font-size: 1.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #back-img{
+            background: $back-grd;
+            width: 8.5em;
+            margin-right: 3.3em;
+            border-radius: 5%;
+        }
+
+        #perfil{
+            width: 8.4em;
+            height: auto;
+            border-radius: 5%;
+            transform: rotate(10deg);
+        }
+        #informacion{
+            background: $back-grd;
+            padding: 1.2em;
+            border-radius: 20px;
+            margin: 0;
+            text-align: justify;
+            width: 60%;
+        }
+    }
+}
+
+.contenedor-tools{
+    display: flex;
+    justify-content: center;
+
+    h4{
+        font-size: 2.5em;
+    }
+
+    #tool{
+        font-size: 1.5em;
+    }
+}
+
+#MyExperience{
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 1em;
+}
+
+#aproved{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.6em;
+}
+
+.Frontend{
+    margin-right: 13%;
+    background: $back-grd;
+    border-radius: 20px;
+    padding: 2em;
+
+
+    h4{
+        padding-bottom: 0.5em;
+    }
+
+    *{
+        padding-bottom: 0.4em;
+    }
+
+    .ToolsFrontEnd{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        justify-content: center;
+
+        #ToolsFrontEnd{
+            margin-right: 3em;
+            margin-left: 2em;
+            display: flex;
+        }
+    }
+
+}
+
+.BackEnd{
+    background: $back-grd;
+    border-radius: 20px;
+    padding: 2em 3em;
+
+    h4{
+        padding-bottom: 0.3em;
+    }
+}
+
+.ToolsBackEnd{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+
+    #ToolsBackEnd{
+        margin-right: 3em;
+        margin-left: 1.5em;
+        padding-top: 1.5em;
+        display: flex;
+    }
+}
+
+@media(max-width: 1440px){
+    .contenedor-AboutMe{
+        h2{
+            font-size: 2.2em;
+        }
+        .informacion-perfil{
+            font-size: 1.1em;
+            padding-left: 12%;
+            padding-right: 12%;
+            #back-img{
+                margin-right: 7%;
+            }
+        }
+        #MyExperience{
+            font-size: 2.2em;
+        }
+        .Frontend, .BackEnd{
+            font-size: 0.7em;
+            h4{
+                font-size: 1.7em;
+            }
+        }
+    }
+}
+
+@media(max-width: 1060px){
+    .contenedor-AboutMe{
+        margin-bottom: 1em;
+    #back-img{
+        margin-right: 2em;
+    }}
+    .contenedor-tools{
+        h4{
+            font-size: 1.7em;
+        }
+        #tool{
+            font-size: 1em;
+        }
+    }
+    .Frontend{
+        margin-right: 3%;
+    }
+}
+
+@media(max-width: 994px){
+    .contenedor-AboutMe{
+        padding-bottom: 1em;
+        margin-bottom: 11%;
+        h2, #MyExperience{
+            font-size: 1.7em;
+        }
+        
+        .informacion-perfil{
+            font-size: 1em;
+        #back-img{
+            margin-right: 7%;
+        }
+    }
+    .contenedor-tools{
+        display: flex;
+        flex-direction: column;
+    }
+    .Frontend, .BackEnd{
+        margin: 0 4em ;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .BackEnd{
+        padding-bottom: 7%;
+    }
+}}
+
+@media(max-width: 480px){
+    .contenedor-AboutMe{
+        h2, #MyExperience{
+            font-size: 1.4em;
+        }
+        .informacion-perfil{
+            font-size: 0.8em;
+            flex-direction: column;
+            padding: 0;
+        #back-img{
+            margin-right: 2em;
+            margin-bottom: 3em;
+        }
+    }
+    .contenedor-tools{
+        display: flex;
+        flex-direction: column;
+    }
+    .Frontend, .BackEnd{
+        margin: 0 4em ;
+        font-size: 0.6em;
+    }
+
+    .BackEnd{
+        padding-bottom: 13%;
+    }
+    }   
+}

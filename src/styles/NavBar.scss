@@ -1,0 +1,128 @@
+@font-face {
+    font-family: Radicalis;
+    src: url('../fonts/Radicalis.ttf');
+}
+@font-face {
+    font-family: Rajdhani;
+    src: url('../fonts/Rajdhani-Regular.ttf');
+}
+
+.container-navbar{
+    display: flex;
+    padding-bottom: 1.1em;
+    padding-top: 1.8em;
+    *{
+        display: inline;
+        margin-top: 0.3em;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+#nombre{
+    margin-left: 2.7%;
+    font-size: 2em;
+    font-family: Radicalis;
+}
+
+.items{
+    font-family: Rajdhani;
+    margin-left: 52%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.5em;
+    #link{
+        text-decoration: none;
+    }
+    #link:hover{
+        color: rgb(94, 94, 94);
+    }
+}
+
+#icon{
+    display: none;
+}
+
+@media (max-width: 1440px){
+    .items{
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 1200px){
+    .items{
+        margin-left: 32%;
+      }
+}
+
+@media (max-width: 1024px){
+    .items{
+        margin-left: 31%;
+      }
+    #nombre{
+      font-size: 1.5em;
+    }
+    .items{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-navbar{
+        padding: 0.8em;
+    }
+    .items #link{display: none;}
+    #icon {
+      display: inline;
+      width: 10%;
+      height: auto;
+      background: none;
+      border: 0;
+      width: 2.8em;
+      img{
+          filter: invert(100%);
+          width: 100%;
+          height: auto;
+      }
+    }
+    #nombre{
+        font-size: medium;
+        margin: 0;
+        padding: 0;
+    }
+  }
+  
+//navbar responsivo para dispositivos móviles
+
+  @media (max-width: 768px) {
+    .container-navbar.responsive{
+        padding: 0 0 1em 0;
+        flex-direction: column;
+        background-color: rgb(39, 65, 67);
+        #nombre{
+            background-color: rgb(114, 87, 87);
+            margin: 0;
+            padding: 0.8em;
+        }
+        #icon {
+            position: absolute;
+            right: 1.4em;
+            top: 1.4em;
+            padding: 0;
+            margin: 0;
+            width: 1.9em;
+        }
+        .items  {
+            padding-top: 1em;
+            flex-direction: column;
+            margin: 0;
+            #link{
+                padding-bottom: 0.2em;
+                display: inline-flex;
+                width: 95%;
+            }
+        }
+    } 
+  }

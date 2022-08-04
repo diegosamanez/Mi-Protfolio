@@ -6,11 +6,23 @@ import linkedin from '../images/linkedin.png'
 
 function Contact(){
 
-const MyEmail = 'rafaeljuarezflores@gmail.com'
+//     Esto podrias manejarlo como un env
+//     por ejemplo en una archivo environment.js export const EMAIL = import.meta.env.VITE_EMAIL
+//     y en un archivo .env EMAIL='rafaeljuarezflores@gmail.com'
+//     const MyEmail = 'rafaeljuarezflores@gmail.com'
 
-function Email(){
-    return(`https://formsubmit.co/${MyEmail}`)
-}
+    const handleEventSubmit = async (e) => {
+        e.preventDefault()
+//         add fetch request
+        const response = await fetch('https://formsubmit.co/rafaeljuarezflores@gmail.com', {
+            method: 'POST',
+            body: new FormData(e.target)
+        })
+        
+        const responseJson = response.json()
+//         Ahora puedes manejar la respuesta como mejor te parezca
+        console.log(responseJson)
+    }
 
     return(
         <div className='contact'>
@@ -20,12 +32,12 @@ function Email(){
               <h4>CONMIGO</h4>
             </div>
          
-          <form action={Email} method="POST">
+          <form onSubmit={handleEventSubmit} method="POST">
             <div>
               <label>Nombre</label>
               <input type="text" name='name' required/>
             </div>
-            <input type="hidden" name='_next' value={<Send/>} />
+//             <input type="hidden" name='_next' value={<Send/>} />
             <div>
               <label>Email</label>
               <input type="email" name='email' required/>
